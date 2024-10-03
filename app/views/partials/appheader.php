@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-md navbar-dark bg-dark">
+<div class="navbar navbar-expand-md navbar-light bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?php print_link(HOME_PAGE) ?>">
             <img class="img-responsive" src="<?php print_link(SITE_LOGO); ?>" /> <?php echo SITE_NAME ?>

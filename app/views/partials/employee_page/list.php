@@ -23,13 +23,13 @@ $show_pagination = $this->show_pagination;
         <div class="container-fluid">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title"></h4>
+                    <h4 class="record-title">Employee Page</h4>
                 </div>
                 <div class="col-sm-3 ">
                     <?php $modal_id = "modal-" . random_str(); ?>
                     <button data-toggle="modal" data-target="#<?php  echo $modal_id ?>"  class="btn btn btn-primary my-1">
                         <i class="material-icons">add</i>                                   
-                        Add New Employee 
+                        Add New 
                     </button>
                     <div data-backdrop="true" id="<?php  echo $modal_id ?>" class="modal fade"  role="dialog" aria-labelledby="<?php  echo $modal_id ?>" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -130,7 +130,7 @@ $show_pagination = $this->show_pagination;
                                                         <span class="custom-control-label"></span>
                                                     </label>
                                                 </th>
-                                                <th class="td-sno">#</th>
+                                                <th class="td-sno"></th>
                                                 <th  class="td-first_name"> First Name</th>
                                                 <th  class="td-middle_name"> Middle Name</th>
                                                 <th  class="td-last_name"> Last Name</th>
@@ -142,26 +142,7 @@ $show_pagination = $this->show_pagination;
                                                 <th  class="td-email"> Email</th>
                                                 <th  class="td-work_email"> Work Email</th>
                                                 <th  class="td-employee_type"> Employee Type</th>
-                                                <th  class="td-start_date"> Start Date</th>
-                                                <th  class="td-monthly_salary"> Monthly Salary</th>
-                                                <th  class="td-account_bonus"> Account Bonus</th>
-                                                <th  class="td-client"> Client</th>
-                                                <th  class="td-position"> Position</th>
-                                                <th  class="td-employment_status"> Employment Status</th>
-                                                <th  class="td-start_shift_day"> Start Shift Day</th>
-                                                <th  class="td-end_shift_day"> End Shift Day</th>
-                                                <th  class="td-shift_time_in"> Shift Time In</th>
-                                                <th  class="td-shift_time_out"> Shift Time Out</th>
-                                                <th  class="td-lunch_break_start"> Lunch Break Start</th>
-                                                <th  class="td-lunch_break_end"> Lunch Break End</th>
-                                                <th  class="td-sss_number"> Sss Number</th>
-                                                <th  class="td-sss_contribution"> Sss Contribution</th>
-                                                <th  class="td-pagibig_number"> Pagibig Number</th>
-                                                <th  class="td-pagibig_contribution"> Pagibig Contribution</th>
-                                                <th  class="td-philhealth_number"> Philhealth Number</th>
-                                                <th  class="td-philhealth_contribution"> Philhealth Contribution</th>
-                                                <th  class="td-tin_number"> Tin Number</th>
-                                                <th  class="td-tax_percentage"> Tax Percentage</th>
+                                             
                                                 <th class="td-btn"></th>
                                             </tr>
                                         </thead>
@@ -324,312 +305,7 @@ $show_pagination = $this->show_pagination;
                                                             <?php echo $data['employee_type']; ?> 
                                                         </span>
                                                     </td>
-                                                    <td class="td-start_date">
-                                                        <span  data-flatpickr="{ enableTime: false, minDate: '', maxDate: ''}" 
-                                                            data-value="<?php echo $data['start_date']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="start_date" 
-                                                            data-title="Enter Start Date" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="flatdatetimepicker" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['start_date']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-monthly_salary">
-                                                        <span  data-value="<?php echo $data['monthly_salary']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="monthly_salary" 
-                                                            data-title="Enter Monthly Salary" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="text" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['monthly_salary']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-account_bonus">
-                                                        <span  data-value="<?php echo $data['account_bonus']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="account_bonus" 
-                                                            data-title="Enter Account Bonus" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="text" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['account_bonus']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-client">
-                                                        <span  data-source='<?php echo json_encode_quote(Menu :: $client); ?>' 
-                                                            data-value="<?php echo $data['client']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="client" 
-                                                            data-title="Select" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="select" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['client']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-position">
-                                                        <span  data-source='<?php echo json_encode_quote(Menu :: $position); ?>' 
-                                                            data-value="<?php echo $data['position']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="position" 
-                                                            data-title="Select" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="select" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['position']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-employment_status">
-                                                        <span  data-source='<?php echo json_encode_quote(Menu :: $employment_status); ?>' 
-                                                            data-value="<?php echo $data['employment_status']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="employment_status" 
-                                                            data-title="Select" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="select" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['employment_status']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-start_shift_day">
-                                                        <span  data-source='<?php echo json_encode_quote(Menu :: $start_shift_day); ?>' 
-                                                            data-value="<?php echo $data['start_shift_day']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="start_shift_day" 
-                                                            data-title="Select" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="select" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['start_shift_day']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-end_shift_day">
-                                                        <span  data-source='<?php echo json_encode_quote(Menu :: $end_shift_day); ?>' 
-                                                            data-value="<?php echo $data['end_shift_day']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="end_shift_day" 
-                                                            data-title="Select" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="select" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['end_shift_day']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-shift_time_in">
-                                                        <span  data-value="<?php echo $data['shift_time_in']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="shift_time_in" 
-                                                            data-title="Enter Shift Time In" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="time" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['shift_time_in']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-shift_time_out">
-                                                        <span  data-value="<?php echo $data['shift_time_out']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="shift_time_out" 
-                                                            data-title="Enter Shift Time Out" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="time" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['shift_time_out']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-lunch_break_start">
-                                                        <span  data-value="<?php echo $data['lunch_break_start']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="lunch_break_start" 
-                                                            data-title="Enter Lunch Break Start" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="time" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['lunch_break_start']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-lunch_break_end">
-                                                        <span  data-value="<?php echo $data['lunch_break_end']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="lunch_break_end" 
-                                                            data-title="Enter Lunch Break End" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="time" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['lunch_break_end']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-sss_number">
-                                                        <span  data-value="<?php echo $data['sss_number']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="sss_number" 
-                                                            data-title="Enter Sss Number" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="text" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['sss_number']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-sss_contribution">
-                                                        <span  data-value="<?php echo $data['sss_contribution']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="sss_contribution" 
-                                                            data-title="Enter Sss Contribution" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="text" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['sss_contribution']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-pagibig_number">
-                                                        <span  data-value="<?php echo $data['pagibig_number']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="pagibig_number" 
-                                                            data-title="Enter Pagibig Number" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="text" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['pagibig_number']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-pagibig_contribution">
-                                                        <span  data-value="<?php echo $data['pagibig_contribution']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="pagibig_contribution" 
-                                                            data-title="Enter Pagibig Contribution" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="text" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['pagibig_contribution']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-philhealth_number">
-                                                        <span  data-value="<?php echo $data['philhealth_number']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="philhealth_number" 
-                                                            data-title="Enter Philhealth Number" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="text" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['philhealth_number']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-philhealth_contribution">
-                                                        <span  data-value="<?php echo $data['philhealth_contribution']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="philhealth_contribution" 
-                                                            data-title="Enter Philhealth Contribution" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="text" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['philhealth_contribution']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-tin_number">
-                                                        <span  data-value="<?php echo $data['tin_number']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="tin_number" 
-                                                            data-title="Enter Tin Number" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="text" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['tin_number']; ?> 
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-tax_percentage">
-                                                        <span  data-value="<?php echo $data['tax_percentage']; ?>" 
-                                                            data-pk="<?php echo $data['id'] ?>" 
-                                                            data-url="<?php print_link("employee_page/editfield/" . urlencode($data['id'])); ?>" 
-                                                            data-name="tax_percentage" 
-                                                            data-title="Enter Tax Percentage" 
-                                                            data-placement="left" 
-                                                            data-toggle="click" 
-                                                            data-type="text" 
-                                                            data-mode="popover" 
-                                                            data-showbuttons="left" 
-                                                            class="is-editable" >
-                                                            <?php echo $data['tax_percentage']; ?> 
-                                                        </span>
-                                                    </td>
+                                                   
                                                     <th class="td-btn">
                                                         <a class="btn btn-sm btn-success has-tooltip page-modal" title="View Record" href="<?php print_link("employee_page/view/$rec_id"); ?>">
                                                             <i class="material-icons">visibility</i> View
@@ -672,30 +348,7 @@ $show_pagination = $this->show_pagination;
                                                         <i class="material-icons">clear</i> Delete Selected
                                                     </button>
                                                     <div class="dropup export-btn-holder mx-1">
-                                                        <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <i class="material-icons">save</i> Export
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                            <?php $export_print_link = $this->set_current_page_link(array('format' => 'print')); ?>
-                                                            <a class="dropdown-item export-link-btn" data-format="print" href="<?php print_link($export_print_link); ?>" target="_blank">
-                                                                <img src="<?php print_link('assets/images/print.png') ?>" class="mr-2" /> PRINT
-                                                                </a>
-                                                                <?php $export_pdf_link = $this->set_current_page_link(array('format' => 'pdf')); ?>
-                                                                <a class="dropdown-item export-link-btn" data-format="pdf" href="<?php print_link($export_pdf_link); ?>" target="_blank">
-                                                                    <img src="<?php print_link('assets/images/pdf.png') ?>" class="mr-2" /> PDF
-                                                                    </a>
-                                                                    <?php $export_word_link = $this->set_current_page_link(array('format' => 'word')); ?>
-                                                                    <a class="dropdown-item export-link-btn" data-format="word" href="<?php print_link($export_word_link); ?>" target="_blank">
-                                                                        <img src="<?php print_link('assets/images/doc.png') ?>" class="mr-2" /> WORD
-                                                                        </a>
-                                                                        <?php $export_csv_link = $this->set_current_page_link(array('format' => 'csv')); ?>
-                                                                        <a class="dropdown-item export-link-btn" data-format="csv" href="<?php print_link($export_csv_link); ?>" target="_blank">
-                                                                            <img src="<?php print_link('assets/images/csv.png') ?>" class="mr-2" /> CSV
-                                                                            </a>
-                                                                            <?php $export_excel_link = $this->set_current_page_link(array('format' => 'excel')); ?>
-                                                                            <a class="dropdown-item export-link-btn" data-format="excel" href="<?php print_link($export_excel_link); ?>" target="_blank">
-                                                                                <img src="<?php print_link('assets/images/xsl.png') ?>" class="mr-2" /> EXCEL
-                                                                                </a>
+                                                        
                                                                             </div>
                                                                         </div>
                                                                     </div>

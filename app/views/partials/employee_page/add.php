@@ -15,7 +15,7 @@ $redirect_to = $this->redirect_to;
         <div class="container">
             <div class="row ">
                 <div class="col ">
-                    <h4 class="record-title">Add New Employee</h4>
+                    <h4 class="record-title">Add New Employee Page</h4>
                 </div>
             </div>
         </div>
@@ -149,7 +149,7 @@ $redirect_to = $this->redirect_to;
                                                                             </div>
                                                                             <div class="col-sm-8">
                                                                                 <div class="input-group">
-                                                                                    <input id="ctrl-birthdate" class="form-control datepicker  datepicker" required="" value="<?php  echo $this->set_field_value('birthdate',""); ?>" type="date"  name="birthdate" placeholder="Enter Birthdate" data-min-date="" data-max-date="" data-date-format="Y-m-d" data-alt-format="F j, Y" data-inline="false" data-no-calendar="false" data-mode="single" /> 
+                                                                                    <input id="ctrl-birthdate" class="form-control datepicker  datepicker" required="" value="<?php  echo $this->set_field_value('birthdate',""); ?>" type="date"  name="birthdate" placeholder="Enter Birthdate"  data-min-date="" data-max-date="" data-date-format="Y-m-d" data-alt-format="F j, Y " data-inline="false" data-no-calendar="false" data-mode="single" /> 
                                                                                         <div class="input-group-append">
                                                                                             <span class="input-group-text"><i class="material-icons">date_range</i></span>
                                                                                         </div>
@@ -176,7 +176,7 @@ $redirect_to = $this->redirect_to;
                                                                                     </div>
                                                                                     <div class="col-sm-8">
                                                                                         <div class="">
-                                                                                            <select required=""  id="ctrl-civil_status" name="civil_status"  placeholder="Select a value ..."    class="form-control" >
+                                                                                            <select required=""  id="ctrl-civil_status" name="civil_status"  placeholder="Select Value ..."    class="form-control" >
                                                                                                 <option value="">Select</option>
                                                                                                 <?php
                                                                                                 $civil_status_options = Menu :: $civil_status;
@@ -259,7 +259,7 @@ $redirect_to = $this->redirect_to;
                                                                                         <i class="material-icons">send</i>
                                                                                     </button>
                                                                                 </div>
-                                                                            
+                                                                           
                                                                         </div>
                                                                     </div>
                                                                     <div class="tab-pane  fade" id="TabPage-1-Page2" role="tabpanel">
@@ -272,7 +272,7 @@ $redirect_to = $this->redirect_to;
                                                                                         </div>
                                                                                         <div class="col-sm-8">
                                                                                             <div class="input-group">
-                                                                                                <input id="ctrl-start_date" class="form-control datepicker  datepicker" required="" value="<?php  echo $this->set_field_value('start_date',""); ?>" type="datetime"  name="start_date" placeholder="Enter Start Date"  data-min-date="" data-max-date="" data-date-format="Y-m-d" data-alt-format="F j, Y" data-inline="false" data-no-calendar="false" data-mode="single" /> 
+                                                                                                <input id="ctrl-start_date" class="form-control datepicker  datepicker" required="" value="<?php  echo $this->set_field_value('start_date',""); ?>" type="date"  name="start_date" placeholder="Enter Start Date"  data-min-date="" data-max-date="" data-date-format="Y-m-d" data-alt-format="F j, Y" data-inline="false" data-no-calendar="false" data-mode="single" /> 
                                                                                                     <div class="input-group-append">
                                                                                                         <span class="input-group-text"><i class="material-icons">date_range</i></span>
                                                                                                     </div>
@@ -456,8 +456,9 @@ $redirect_to = $this->redirect_to;
                                                                                                     </div>
                                                                                                     <div class="col-sm-8">
                                                                                                         <div class="input-group">
+                                                                                                            
                                                                                                             <input id="ctrl-shift_time_in" required="" value="<?php  echo $this->set_field_value('shift_time_in',""); ?>" type="time" name="shift_time_in" placeholder="Enter Shift Time In" data-enable-time="true" data-min-date="" data-max-date=""  data-alt-format="H:i" data-date-format="H:i:S" data-inline="false" data-no-calendar="true" data-mode="single" /> 
-                                                                                                               
+                                                                                                        
                                                                                                             </div>
                                                                                                         </div>
                                                                                                     </div>
@@ -469,7 +470,7 @@ $redirect_to = $this->redirect_to;
                                                                                                         </div>
                                                                                                         <div class="col-sm-8">
                                                                                                             <div class="input-group">
-                                                                                                                <input id="ctrl-shift_time_out"   required="" value="<?php  echo $this->set_field_value('shift_time_out',""); ?>" type="time" name="shift_time_out" placeholder="Enter Shift Time Out" data-enable-time="true" data-min-date="" data-max-date=""  data-alt-format="H:i" data-date-format="H:i:S" data-inline="false" data-no-calendar="true" data-mode="single" /> 
+                                                                                                                <input id="ctrl-shift_time_out"  required="" value="<?php  echo $this->set_field_value('shift_time_out',""); ?>" type="time" name="shift_time_out" placeholder="Enter Shift Time Out" data-enable-time="true" data-min-date="" data-max-date=""  data-alt-format="H:i" data-date-format="H:i:S" data-inline="false" data-no-calendar="true" data-mode="single" /> 
                                                                                                                     
                                                                                                                 </div>
                                                                                                             </div>
@@ -482,8 +483,8 @@ $redirect_to = $this->redirect_to;
                                                                                                             </div>
                                                                                                             <div class="col-sm-8">
                                                                                                                 <div class="">
-                                                                                                                    <input id="ctrl-lunch_break_start"   required="" value="<?php  echo $this->set_field_value('unch_break_start',""); ?>" type="time" name="lunch_break_start" data-enable-time="true" data-min-date="" data-max-date=""  data-alt-format="H:i" data-date-format="H:i:S" data-inline="false" data-no-calendar="true" data-mode="single" />
-                                                                                                                   
+                                                                                                                <input id="ctrl-lunch_break_start"  required="" value="<?php  echo $this->set_field_value('lunch_break_start',""); ?>" type="time" name="lunch_break_start"  data-enable-time="true" data-min-date="" data-max-date=""  data-alt-format="H:i" data-date-format="H:i:S" data-inline="false" data-no-calendar="true" data-mode="single" /> 
+                                                                                                                    
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
@@ -491,11 +492,12 @@ $redirect_to = $this->redirect_to;
                                                                                                         <div class="form-group ">
                                                                                                             <div class="row">
                                                                                                                 <div class="col-sm-4">
-                                                                                                                    <label class="control-label" for="lunch_break_end">Lunch Break End <span class="text-danger">*</span></label>
+                                                                                                                    <label class="control-label" for="lunch_break_start">Lunch Break End <span class="text-danger">*</span></label>
                                                                                                                 </div>
                                                                                                                 <div class="col-sm-8">
                                                                                                                     <div class="">
-                                                                                                                    <input id="ctrl-lunch_break_end"   required="" value="<?php  echo $this->set_field_value('unch_break_end',""); ?>" type="time" name="lunch_break_end" data-enable-time="true" data-min-date="" data-max-date=""  data-alt-format="H:i" data-date-format="H:i:S" data-inline="false" data-no-calendar="true" data-mode="single" />
+                                                                                                                    <input id="ctrl-lunch_break_end"  required="" value="<?php  echo $this->set_field_value('lunch_break_end',""); ?>" type="time" name="lunch_break_end"  data-enable-time="true" data-min-date="" data-max-date=""  data-alt-format="H:i" data-date-format="H:i:S" data-inline="false" data-no-calendar="true" data-mode="single" /> 
+                                                                                                                       
                                                                                                                         </div>
                                                                                                                     </div>
                                                                                                                 </div>
@@ -521,7 +523,7 @@ $redirect_to = $this->redirect_to;
                                                                                                                 </div>
                                                                                                                 <div class="col-sm-8">
                                                                                                                     <div class="">
-                                                                                                                        <input id="ctrl-sss_number"  value="<?php  echo $this->set_field_value('sss_number',""); ?>" type="number" placeholder="Enter SSS Number"  required="" name="sss_number"  class="form-control " />
+                                                                                                                        <input id="ctrl-sss_number"  value="<?php  echo $this->set_field_value('sss_number',""); ?>" type="number" placeholder="Enter Sss Number"  required="" name="sss_number"  class="form-control " />
                                                                                                                         </div>
                                                                                                                     </div>
                                                                                                                 </div>
@@ -533,7 +535,7 @@ $redirect_to = $this->redirect_to;
                                                                                                                     </div>
                                                                                                                     <div class="col-sm-8">
                                                                                                                         <div class="">
-                                                                                                                            <input id="ctrl-sss_contribution"  value="<?php  echo $this->set_field_value('sss_contribution',""); ?>" type="text" placeholder="Enter SSS Contribution"  required="" name="sss_contribution"  class="form-control " />
+                                                                                                                            <input id="ctrl-sss_contribution"  value="<?php  echo $this->set_field_value('sss_contribution',""); ?>" type="text" placeholder="Enter Sss Contribution"  required="" name="sss_contribution"  class="form-control " />
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                     </div>
@@ -545,7 +547,7 @@ $redirect_to = $this->redirect_to;
                                                                                                                         </div>
                                                                                                                         <div class="col-sm-8">
                                                                                                                             <div class="">
-                                                                                                                                <input id="ctrl-pagibig_number"  value="<?php  echo $this->set_field_value('pagibig_number',""); ?>" type="number" placeholder="Enter Pag-ibig Number"  required="" name="pagibig_number"  class="form-control " />
+                                                                                                                                <input id="ctrl-pagibig_number"  value="<?php  echo $this->set_field_value('pagibig_number',""); ?>" type="number" placeholder="Enter Pagibig Number"  required="" name="pagibig_number"  class="form-control " />
                                                                                                                                 </div>
                                                                                                                             </div>
                                                                                                                         </div>
@@ -557,7 +559,7 @@ $redirect_to = $this->redirect_to;
                                                                                                                             </div>
                                                                                                                             <div class="col-sm-8">
                                                                                                                                 <div class="">
-                                                                                                                                    <input id="ctrl-pagibig_contribution"  value="<?php  echo $this->set_field_value('pagibig_contribution',""); ?>" type="text" placeholder="Enter Pag-ibig Contribution"  required="" name="pagibig_contribution"  class="form-control " />
+                                                                                                                                    <input id="ctrl-pagibig_contribution"  value="<?php  echo $this->set_field_value('pagibig_contribution',""); ?>" type="text" placeholder="Enter Pagibig Contribution"  required="" name="pagibig_contribution"  class="form-control " />
                                                                                                                                     </div>
                                                                                                                                 </div>
                                                                                                                             </div>
@@ -593,7 +595,7 @@ $redirect_to = $this->redirect_to;
                                                                                                                                         </div>
                                                                                                                                         <div class="col-sm-8">
                                                                                                                                             <div class="">
-                                                                                                                                                <input id="ctrl-tin_number"  value="<?php  echo $this->set_field_value('tin_number',""); ?>" type="number" placeholder="Enter TIN Number"  required="" name="tin_number"  class="form-control " />
+                                                                                                                                                <input id="ctrl-tin_number"  value="<?php  echo $this->set_field_value('tin_number',""); ?>" type="number" placeholder="Enter Tin Number"  required="" name="tin_number"  class="form-control " />
                                                                                                                                                 </div>
                                                                                                                                             </div>
                                                                                                                                         </div>

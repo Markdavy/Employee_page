@@ -294,7 +294,7 @@ $show_export_btn = $this->show_export_btn;
                                                                         </a>
                                                                     </div>
                                                                 </div>
-                                                                
+                                                               
                                                                 <a class="btn btn-sm btn-danger record-delete-btn mx-1"  href="<?php print_link("employee_page/delete/$rec_id/?csrf_token=$csrf_token&redirect=$current_page"); ?>" data-prompt-msg="Are you sure you want to delete this record?" data-display-style="modal">
                                                                     <i class="material-icons">clear</i> Delete
                                                                 </a>
@@ -581,7 +581,7 @@ $show_export_btn = $this->show_export_btn;
                                                                                             </a>
                                                                                         </div>
                                                                                     </div>
-                                                                                    
+                                                                                   
                                                                                     <a class="btn btn-sm btn-danger record-delete-btn mx-1"  href="<?php print_link("employee_page/delete/$rec_id/?csrf_token=$csrf_token&redirect=$current_page"); ?>" data-prompt-msg="Are you sure you want to delete this record?" data-display-style="modal">
                                                                                         <i class="material-icons">clear</i> Delete
                                                                                     </a>

@@ -50,7 +50,7 @@ class Employee_pageController extends BaseController{
 			"philhealth_contribution", 
 			"tin_number", 
 			"tax_percentage");
-		$pagination = $this->get_pagination(MAX_RECORD_COUNT); // get current pagination e.g array(page_number, page_limit)
+		$pagination = $this->get_pagination(5); // get current pagination e.g array(page_number, page_limit)
 		//search table record
 		if(!empty($request->search)){
 			$text = trim($request->search); 
